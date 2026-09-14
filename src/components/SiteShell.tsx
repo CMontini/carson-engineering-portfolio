@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import type { ReactNode } from "react";
 
+const linkedInUrl = "https://www.linkedin.com/in/carson-montini";
+
 export default function SiteShell({ children }: { children: ReactNode }) {
   const year = new Date().getFullYear();
 
@@ -19,6 +21,9 @@ export default function SiteShell({ children }: { children: ReactNode }) {
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/projects">Engineering Work</NavLink>
             <NavLink to="/personal-projects">Personal Projects</NavLink>
+            <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="Carson Montini on LinkedIn">
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
             <a className="nav-contact" href="mailto:montini.carson@gmail.com">Contact</a>
           </nav>
         </div>
@@ -33,6 +38,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
           Mechanical design, system integration, manufacturing, and hands-on engineering development.
         </p>
         <div className="footer-links" aria-label="Footer links">
+          <a href={linkedInUrl} target="_blank" rel="noreferrer">LinkedIn Profile ↗</a>
           <a href="mailto:montini.carson@gmail.com">Email</a>
           <Link to="/projects">Engineering Work</Link>
           <Link to="/personal-projects">Personal Projects</Link>
