@@ -1,6 +1,6 @@
 import c4Hero from "../assets/c4/accum-hvopen.png";
 import c5Hero from "../assets/c5/pdu-transparent.png";
-import aceHero from "../assets/ace/system-architecture.svg";
+import aceHero from "../assets/ace/ace-nearly-assembled-studio.webp";
 
 export const featuredProjects = [
   {

@@ -2,7 +2,8 @@ import SiteShell from "../components/SiteShell";
 import CaseStudyNavigation, { CaseStudyBackLink } from "../components/CaseStudyNavigation";
 import ProjectHero from "../components/ProjectHero";
 import SectionTitle from "../components/SectionTitle";
-import hero from "../assets/ace/system-architecture.svg";
+import hero from "../assets/ace/ace-nearly-assembled-studio.webp";
+import systemDiagram from "../assets/ace/system-architecture.svg";
 
 export default function Ace() {
   return (
@@ -40,7 +41,7 @@ export default function Ace() {
             text="Early targets established the physical envelope, expected speed, operating time, and subsystem loads that guided the chassis, drivetrain, battery, and water-system architecture."
           />
           <div className="wide-image">
-            <img src={hero} alt="ACE system architecture showing mobility, controls, misting, and rotating cleaning subsystems" />
+            <img src={systemDiagram} alt="ACE system architecture showing mobility, controls, misting, and rotating cleaning subsystems" />
           </div>
           <div className="constraint-grid">
             <article><span>01</span><h3>Compact Envelope</h3><p>A circular footprint near 12 inches in diameter constrained the reservoir, electronics, battery, motors, and cleaning hardware.</p></article>
