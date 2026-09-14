@@ -79,8 +79,8 @@ export default function Home() {
           <div className="section-heading-row">
             <SectionTitle
               eyebrow="Selected Work"
-              title="Formula SAE battery & high-voltage systems"
-              text="A closer look at the mechanical design, packaging, manufacturing, and integration work behind two generations of CBU Motorsports electric vehicles."
+              title="Mechanical and electromechanical systems"
+              text="Battery and high-voltage hardware for Formula SAE vehicles, plus a compact autonomous cleaning robot developed from requirements through prototype integration."
             />
             <Link className="section-link" to="/projects">View engineering archive →</Link>
           </div>

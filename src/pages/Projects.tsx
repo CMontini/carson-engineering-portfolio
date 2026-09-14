@@ -13,6 +13,11 @@ const projectMeta = {
     role: "Power Distribution Unit mechanical owner",
     scope: "Enclosure · interfaces · fabrication · integration",
   },
+  "ace": {
+    label: "Autonomous cleaning robotics",
+    role: "Mechanical & electromechanical development",
+    scope: "Mobility · cleaning system · controls · prototyping",
+  },
 };
 
 export default function Projects() {
@@ -22,14 +27,14 @@ export default function Projects() {
         <section className="page-intro engineering-intro">
           <div className="engineering-intro-copy">
             <p className="eyebrow">Engineering Work</p>
-            <h1>Formula SAE electric vehicle development</h1>
+            <h1>Mechanical and electromechanical development</h1>
             <p>
-              Two generations of CBU Motorsports work showing progression from focused battery-subsystem contribution to independent ownership of high-voltage mechanical hardware.
+              Three case studies showing battery and high-voltage hardware for Formula SAE vehicles alongside a compact autonomous cleaning robot developed from requirements through prototype integration.
             </p>
           </div>
           <div className="archive-summary" aria-label="Engineering archive summary">
-            <div><strong>02</strong><span>Vehicle generations</span></div>
-            <div><strong>Battery + HV</strong><span>Primary systems</span></div>
+            <div><strong>03</strong><span>Major case studies</span></div>
+            <div><strong>Battery + Robotics</strong><span>Primary systems</span></div>
             <div><strong>CAD → Build</strong><span>Design through fabrication</span></div>
           </div>
         </section>
@@ -37,7 +42,7 @@ export default function Projects() {
         <section className="section pad-section engineering-archive-section">
           <div className="archive-heading">
             <div>
-              <p className="eyebrow">CBU Motorsports</p>
+              <p className="eyebrow">Project Archive</p>
               <h2>Engineering progression</h2>
             </div>
             <p>

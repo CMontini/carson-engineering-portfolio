@@ -1,5 +1,6 @@
 import c4Hero from "../assets/c4/accum-hvopen.png";
 import c5Hero from "../assets/c5/pdu-transparent.png";
+import aceHero from "../assets/ace/system-architecture.svg";
 
 export const featuredProjects = [
   {
@@ -17,5 +18,13 @@ export const featuredProjects = [
     subtitle: "Designed and fabricated the Power Distribution Unit enclosure and packaging while contributing to accumulator layout, interfaces, and battery-system integration.",
     image: c5Hero,
     tags: ["PDU", "SolidWorks", "System Integration", "Rules Compliance"]
+  },
+  {
+    slug: "ace",
+    title: "ACE",
+    kicker: "Automated Court Enhancer",
+    subtitle: "Developed a compact autonomous hardwood-court cleaning robot that integrates differential drive, controlled misting, and a rotating cleaning system.",
+    image: aceHero,
+    tags: ["Robotics", "Arduino", "Electromechanical Design", "Prototyping"]
   }
 ];
