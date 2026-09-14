@@ -1,4 +1,5 @@
 import SiteShell from "../components/SiteShell";
+import CaseStudyNavigation, { CaseStudyBackLink } from "../components/CaseStudyNavigation";
 import ProjectHero from "../components/ProjectHero";
 import SectionTitle from "../components/SectionTitle";
 import hero from "../assets/ace/system-architecture.svg";
@@ -7,6 +8,7 @@ export default function Ace() {
   return (
     <SiteShell>
       <main className="case-study-page ace-page">
+        <CaseStudyBackLink to="/projects" label="Engineering Work" />
         <ProjectHero
           eyebrow="University Engineering Project · Autonomous Robotics"
           title="ACE"
@@ -85,6 +87,11 @@ export default function Ace() {
             <article><span>03</span><h3>Iterate</h3><p>Use prototype observations to refine weight distribution, moisture protection, cleaning pressure, controls, and maintenance access.</p></article>
           </div>
         </section>
+        <CaseStudyNavigation
+          backTo="/projects"
+          backLabel="All Engineering Work"
+          previous={{ to: "/projects/charger-5", label: "Charger 5" }}
+        />
       </main>
     </SiteShell>
   );

@@ -1,4 +1,5 @@
 import SiteShell from "../components/SiteShell";
+import CaseStudyNavigation, { CaseStudyBackLink } from "../components/CaseStudyNavigation";
 import ProjectHero from "../components/ProjectHero";
 import SectionTitle from "../components/SectionTitle";
 import ImageGrid from "../components/ImageGrid";
@@ -21,6 +22,7 @@ export default function Charger4() {
   return (
     <SiteShell>
       <main className="case-study-page charger4-page">
+        <CaseStudyBackLink to="/projects" label="Engineering Work" />
         <ProjectHero
           eyebrow="CBU Motorsports · Formula SAE Electric"
           title="Charger 4"
@@ -102,6 +104,11 @@ export default function Charger4() {
             {src: driveFront, alt: "Charger 4 during vehicle testing", caption: "Charger 4 in motion during vehicle testing, showing the battery system operating as part of the complete car."}
           ]} />
         </section>
+        <CaseStudyNavigation
+          backTo="/projects"
+          backLabel="All Engineering Work"
+          next={{ to: "/projects/charger-5", label: "Charger 5" }}
+        />
       </main>
     </SiteShell>
   );

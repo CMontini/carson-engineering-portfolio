@@ -1,4 +1,5 @@
 import SiteShell from "../components/SiteShell";
+import CaseStudyNavigation, { CaseStudyBackLink } from "../components/CaseStudyNavigation";
 import ProjectHero from "../components/ProjectHero";
 import SectionTitle from "../components/SectionTitle";
 import ImageGrid from "../components/ImageGrid";
@@ -19,6 +20,7 @@ export default function Charger5() {
   return (
     <SiteShell>
       <main className="case-study-page charger5-page">
+        <CaseStudyBackLink to="/projects" label="Engineering Work" />
         <ProjectHero
           eyebrow="CBU Motorsports · Formula SAE Electric"
           title="Charger 5"
@@ -101,6 +103,12 @@ export default function Charger5() {
             {src: seg3, alt: "Transparent Charger 5 battery segment", caption: "Transparent segment view used to inspect how the packaged cells and interconnect architecture fit together."}
           ]} />
         </section>
+        <CaseStudyNavigation
+          backTo="/projects"
+          backLabel="All Engineering Work"
+          previous={{ to: "/projects/charger-4", label: "Charger 4" }}
+          next={{ to: "/projects/ace", label: "ACE" }}
+        />
       </main>
     </SiteShell>
   );
