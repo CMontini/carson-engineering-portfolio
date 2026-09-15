@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import type { ReactNode } from "react";
 
 const linkedInUrl = "https://www.linkedin.com/in/carson-montini";
+const resumeUrl = "/Carson-Montini-Engineering-Resume.pdf";
 
 export default function SiteShell({ children }: { children: ReactNode }) {
   const year = new Date().getFullYear();
@@ -21,6 +22,15 @@ export default function SiteShell({ children }: { children: ReactNode }) {
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/projects">Engineering Work</NavLink>
             <NavLink to="/personal-projects">Personal Projects</NavLink>
+            <a
+              className="nav-resume"
+              href={resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Carson Montini engineering resume"
+            >
+              Resume <span aria-hidden="true">↗</span>
+            </a>
             <a href={linkedInUrl} target="_blank" rel="noreferrer" aria-label="Carson Montini on LinkedIn">
               LinkedIn <span aria-hidden="true">↗</span>
             </a>
@@ -39,6 +49,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
         </p>
         <div className="footer-links" aria-label="Footer links">
           <a href={linkedInUrl} target="_blank" rel="noreferrer">LinkedIn Profile ↗</a>
+          <a href={resumeUrl} target="_blank" rel="noreferrer">Resume ↗</a>
           <a href="mailto:montini.carson@gmail.com">Email</a>
           <Link to="/projects">Engineering Work</Link>
           <Link to="/personal-projects">Personal Projects</Link>
