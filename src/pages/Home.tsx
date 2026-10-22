@@ -1,125 +1,63 @@
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from 'react';
 import SiteShell from "../components/SiteShell";
-import SectionTitle from "../components/SectionTitle";
-import { featuredProjects } from "../data/projects";
 import c4Hero from "../assets/c4/reveal.png";
-
-const capabilities = [
-  {
-    number: "01",
-    title: "Mechanical Design",
-    text: "Component and subsystem design in SolidWorks, with emphasis on packaging, interfaces, serviceability, and real hardware constraints."
-  },
-  {
-    number: "02",
-    title: "System Integration",
-    text: "Bringing mechanical and electrical hardware together within tight packaging, safety, and rules constraints."
-  },
-  {
-    number: "03",
-    title: "Design for Manufacturing",
-    text: "Designing parts and assemblies around how they will actually be fabricated, assembled, inspected, and revised."
-  },
-  {
-    number: "04",
-    title: "Engineering Development",
-    text: "Moving from requirements and calculations to prototypes, testing, iteration, and finished hardware."
-  }
-];
-
+const projects = [{
+  id: '01',
+  name: 'CHARGER 05',
+  category: 'Formula SAE / Electrical packaging',
+  year: '2025',
+  description: 'Making complex hardware fit. And making it serviceable.',
+  body: 'Designed and fabricated the Power Distribution Unit enclosure and packaging, with work spanning accumulator layout, interfaces, and battery-system integration.',
+  scope: ['Power distribution enclosure', 'SolidWorks / additive manufacturing', 'Packaging, access & rules compliance'],
+  href: '/projects/charger-5'
+}, {
+  id: '02',
+  name: 'CHARGER 04',
+  category: 'Formula SAE / Accumulator systems',
+  year: '2024',
+  description: 'Where mechanical packaging meets high-voltage hardware.',
+  body: 'Designed accumulator packaging and current-carrying hardware, including busbars and supporting calculations, with manufacturability and electrical integration driving the design.',
+  scope: ['Accumulator packaging', 'Busbar development', 'Manufacturing & electrical interfaces'],
+  href: '/projects/charger-4'
+}, {
+  id: '03',
+  name: 'ACE',
+  category: 'Robotics / Automated Court Enhancer',
+  year: '',
+  description: 'A small machine with a whole system to figure out.',
+  body: 'Developed a compact autonomous hardwood-court cleaning robot that integrates differential drive, controlled misting, and a rotating cleaning system.',
+  scope: ['Mechanical & electrical integration', 'Arduino / differential drive', 'Prototype development & testing'],
+  href: '/projects/ace'
+}];
 export default function Home() {
-  return (
-    <SiteShell>
-      <main>
-        <section className="home-hero">
-          <div className="home-hero-copy">
-            <p className="eyebrow">Mechanical Engineering Portfolio</p>
-            <h1>Designing mechanical systems around real constraints.</h1>
-            <p className="hero-lede">
-              I’m a mechanical engineering student focused on mechanical design, electromechanical integration, manufacturing, and hands-on development. I enjoy taking projects from requirements and early concepts through CAD, fabrication, testing, and refinement.
-            </p>
-            <div className="hero-actions">
-              <Link className="button primary" to="/projects">View engineering work</Link>
-              <Link className="button secondary" to="/personal-projects">Explore personal projects</Link>
-            </div>
-            <div className="hero-proof" aria-label="Engineering focus areas">
-              <span>SolidWorks</span>
-              <span>Electromechanical Systems</span>
-              <span>Manufacturing</span>
-              <span>Design &amp; Testing</span>
-            </div>
-          </div>
+  const [active, setActive] = useState<number | null>(null);
+  const [filter, setFilter] = useState('All work');
 
-          <div className="home-hero-visual">
-            <div className="hero-image-wrap">
-              <img src={c4Hero} alt="CBU Motorsports Formula SAE electric vehicle on display" />
-              <span className="hero-image-label">Formula SAE Electric</span>
-            </div>
-            <div className="hero-statbar">
-              <span><strong>Tools</strong>SolidWorks · Excel</span>
-              <span><strong>Fabrication</strong>3D Printing · Laser Cutting · Machining</span>
-              <span><strong>Focus</strong>Packaging · Integration · Hardware Development</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="capability-band" aria-label="Engineering capabilities">
-          <div className="capability-grid">
-            {capabilities.map((capability) => (
-              <article className="capability-item" key={capability.number}>
-                <span className="capability-number">{capability.number}</span>
-                <h2>{capability.title}</h2>
-                <p>{capability.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section pad-section selected-work-section">
-          <div className="section-heading-row">
-            <SectionTitle
-              eyebrow="Selected Work"
-              title="Mechanical and electromechanical systems"
-              text="Battery and high-voltage hardware for Formula SAE vehicles, plus a compact autonomous cleaning robot developed from requirements through prototype integration."
-            />
-            <Link className="section-link" to="/projects">View engineering archive →</Link>
-          </div>
-
-          <div className="project-card-grid">
-            {featuredProjects.map((project, index) => (
-              <Link to={`/projects/${project.slug}`} className="project-card" key={project.slug}>
-                <div className="project-card-image">
-                  <img src={project.image} alt={`${project.title} engineering project`} />
-                  <span className="project-card-index">0{index + 1}</span>
-                </div>
-                <div className="project-card-body">
-                  <p className="eyebrow">{project.kicker}</p>
-                  <div className="project-card-title-row">
-                    <h3>{project.title}</h3>
-                    <span className="project-card-arrow" aria-hidden="true">↗</span>
-                  </div>
-                  <p>{project.subtitle}</p>
-                  <div className="tag-row">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                  <span className="text-link">Open case study</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="section dark-band">
-          <div>
-            <p className="eyebrow light">Engineering approach</p>
-            <h2>Design decisions should hold up beyond the CAD model.</h2>
-          </div>
-          <div className="dark-band-copy">
-            <p>
-              I approach projects by identifying constraints early, understanding the interfaces between systems, and making design choices that can be manufactured, assembled, tested, and serviced. I use analysis to guide decisions, then rely on fabrication and testing to expose what needs to change.
-            </p>
-            <Link className="button dark-button" to="/personal-projects">Explore independent projects</Link>
-          </div>
-        </section>
-      </main>
-    </SiteShell>
-  );
+  const dialogRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (active === null) return;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    dialogRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
+    return () => { document.body.style.overflow = previousOverflow; previousFocus?.focus(); };
+  }, [active]);
+  const selected = active === null ? null : projects[active];
+  return <SiteShell>
+ <main><section className="fj-intro"><div className="fj-topline"><span><i /> INDEPENDENT MIND. HANDS-ON ENGINEER.</span><span>RIVERSIDE, CALIFORNIA / PORTFOLIO 2026</span></div><h1>Ideas are easy.<br />Make them <em>work.</em><span className="fj-plus">+</span></h1><div className="fj-intro-bottom"><span className="fj-micro">DESIGN / BUILD / TEST / REPEAT</span><p>I’m Carson. I turn mechanical problems into physical things—from Formula SAE electrical systems to autonomous robots.</p><a href="#work" className="fj-jump" aria-label="Explore selected work">↓</a></div></section>
+ <section className="fj-hero" aria-label="Formula SAE featured project"><img src={c4Hero} width={1536} height={1024} fetchPriority="high" alt="CBU Motorsports Formula SAE electric car" /><div className="fj-photo-shade" /><span className="fj-cross fj-cross-a">+</span><span className="fj-cross fj-cross-b">+</span><div className="fj-image-top"><span>FIELD NOTES / 001</span><span>CBU MOTORSPORTS — FORMULA SAE ELECTRIC</span></div><div className="fj-image-bottom"><div><span className="fj-micro">SYSTEMS THAT LEAVE THE SCREEN.</span><h2>Built for<br />the real world.</h2></div><button onClick={() => setActive(0)} className="fj-feature-link"><span>EXPLORE THE WORK<br /><b>Charger 05 / System integration</b></span><span>↗</span></button></div><div className="fj-image-foot"><span>FIG. 01 — ENGINEERING IN CONTEXT</span><span>CAD → FABRICATION → HARDWARE</span></div></section>
+ <section id="work" className="fj-work"><div className="fj-section-head"><div><span className="fj-micro">01 / PROJECT REGISTER</span><h2>Selected work<span> (03)</span></h2></div><div className="fj-filters" aria-label="Filter projects">{['All work', 'Formula SAE', 'Robotics'].map(f => <button key={f} className={filter === f ? 'active' : ''} aria-pressed={filter === f} onClick={() => setFilter(f)}>{f}</button>)}</div></div><div className="fj-register-label"><span>NO. / PROJECT</span><span>DISCIPLINE</span><span>OPEN</span></div>{projects.map((p, i) => (filter === 'All work' || p.category.startsWith(filter)) && <button className="fj-project" key={p.id} onClick={() => setActive(i)}><span className="fj-project-title"><small>{p.id}</small><strong>{p.name}</strong></span><span className="fj-project-meta">{p.category}<small>{p.description}</small></span><span className="fj-project-arrow">↗</span></button>)}<a className="fj-all" href="/personal-projects" target="_blank" rel="noreferrer">ALSO ON THE WORKBENCH <span>Personal projects & explorations ↗</span></a></section>
+ <section id="about" className="fj-about"><div className="fj-about-side"><span className="fj-micro">02 / HOW I THINK</span><div className="fj-orbit" aria-hidden="true"><span>CM</span><i /><b>+</b></div><span className="fj-micro">FROM FIRST SKETCH<br />TO LAST FASTENER.</span></div><div className="fj-about-content"><h2>A CAD model is<br />only the <em>beginning.</em></h2><p>I care about what happens after the render. How a part is made. How the wiring routes. Whether you can reach that fastener. What breaks in testing—and what the next iteration needs.</p><p>I’m a mechanical engineering student at California Baptist University, focused on mechanical design, electromechanical integration, and hands-on development.</p><div className="fj-method">{[['01', 'Find the constraints', 'Understand the interfaces, requirements, and practical limits.'], ['02', 'Build something real', 'Design around the tools, materials, and people doing the making.'], ['03', 'Let testing talk', 'Use the hardware to challenge the assumptions. Refine. Repeat.']].map(([n, t, d]) => <div key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></div>)}</div></div></section>
+ <section className="fj-end"><span className="fj-micro">HAVE A GOOD PROBLEM?</span><a href="mailto:montini.carson@gmail.com">Let’s make<br />something <em>work.</em> <span>↗</span></a><div className="fj-end-bottom"><span>MECHANICAL DESIGN / SYSTEM INTEGRATION / PROTOTYPING</span><a href="mailto:montini.carson@gmail.com">MONTINI.CARSON@GMAIL.COM ↗</a></div></section></main>
+ {selected && <div className="fj-dialog-backdrop" onClick={() => setActive(null)}><section ref={dialogRef} className="fj-dialog" role="dialog" aria-modal="true" aria-labelledby="project-title" onClick={e => e.stopPropagation()} onKeyDown={e => {
+        if (e.key === 'Escape') setActive(null);
+        if (e.key === 'Tab') {
+          const elements = dialogRef.current?.querySelectorAll<HTMLElement>('a[href], button');
+          if (!elements?.length) return;
+          const first = elements[0], last = elements[elements.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      }}><button className="fj-close" onClick={() => setActive(null)} aria-label="Close project brief">CLOSE ×</button><span className="fj-micro">PROJECT BRIEF / {selected.id}</span><h2 id="project-title">{selected.name}</h2><span className="fj-micro">{selected.category}</span><h3>{selected.description}</h3><p>{selected.body}</p><ul>{selected.scope.map(s => <li key={s}>{s}</li>)}</ul><a className="fj-case" href={selected.href} target="_blank" rel="noreferrer">READ FULL CASE STUDY ↗</a></section></div>}
+ </SiteShell>;
 }
