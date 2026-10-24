@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import Charger4 from "./pages/Charger4";
 import Charger5 from "./pages/Charger5";
 import Ace from "./pages/Ace";
+import SaeAero from "./pages/SaeAero";
 import PersonalProjects from "./pages/PersonalProjects";
 import Mission from "./pages/Mission";
 import RSX from "./pages/RSX";
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/projects/charger-4" element={<Charger4 />} />
         <Route path="/projects/charger-5" element={<Charger5 />} />
         <Route path="/projects/ace" element={<Ace />} />
+        <Route path="/projects/sae-aero" element={<SaeAero />} />
         <Route path="/personal-projects" element={<PersonalProjects />} />
         <Route path="/personal-projects/mission" element={<Mission />} />
         <Route path="/personal-projects/rsx" element={<RSX />} />

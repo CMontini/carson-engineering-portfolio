@@ -92,6 +92,7 @@ export default function Ace() {
           backTo="/projects"
           backLabel="All Engineering Work"
           previous={{ to: "/projects/charger-5", label: "Charger 5" }}
+          next={{ to: "/projects/sae-aero", label: "SAE Aero" }}
         />
       </main>
     </SiteShell>

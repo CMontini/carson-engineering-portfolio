@@ -3,6 +3,11 @@ import SiteShell from "../components/SiteShell";
 import { featuredProjects } from "../data/projects";
 
 const projectMeta = {
+  "sae-aero": {
+    label: "2027 Regular Class · In development",
+    role: "Fuselage design & aircraft integration",
+    scope: "Payload · structure · surface modeling · CFD setup",
+  },
   "charger-4": {
     label: "Battery subsystem development",
     role: "Accumulator segment & busbar design",
@@ -29,12 +34,12 @@ export default function Projects() {
             <p className="eyebrow">Engineering Work</p>
             <h1>Mechanical and electromechanical development</h1>
             <p>
-              Three case studies showing battery and high-voltage hardware for Formula SAE vehicles alongside a compact autonomous cleaning robot developed from requirements through prototype integration.
+              Four case studies spanning Formula SAE battery and high-voltage hardware, autonomous robotics, and ongoing fuselage development for SAE Aero Design Regular Class.
             </p>
           </div>
           <div className="archive-summary" aria-label="Engineering archive summary">
-            <div><strong>03</strong><span>Major case studies</span></div>
-            <div><strong>Battery + Robotics</strong><span>Primary systems</span></div>
+            <div><strong>{String(featuredProjects.length).padStart(2, "0")}</strong><span>Major case studies</span></div>
+            <div><strong>Ground + Air</strong><span>Primary systems</span></div>
             <div><strong>CAD → Build</strong><span>Design through fabrication</span></div>
           </div>
         </section>
@@ -46,7 +51,7 @@ export default function Projects() {
               <h2>Engineering progression</h2>
             </div>
             <p>
-              Each case study is organized around my responsibilities, the constraints that shaped the design, and the hardware produced—not simply a gallery of CAD screenshots.
+              Each case study is organized around my responsibilities, the constraints that shaped the design, and the hardware or ongoing design work.
             </p>
           </div>
 
@@ -57,7 +62,7 @@ export default function Projects() {
                 <Link to={`/projects/${project.slug}`} className={`engineering-project-row project-${index + 1}`} key={project.slug}>
                   <div className="engineering-project-index">0{index + 1}</div>
                   <div className="engineering-project-visual">
-                    <img src={project.image} alt={`${project.title} engineering hardware`} />
+                    <img src={project.image} alt={project.slug === "sae-aero" ? "Conceptual SAE Aero fuselage payload layout" : `${project.title} engineering hardware`} />
                   </div>
                   <div className="engineering-project-content">
                     <div className="engineering-project-topline">

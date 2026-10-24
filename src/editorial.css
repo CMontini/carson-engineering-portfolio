@@ -25,3 +25,16 @@ body{background:var(--paper)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media(max-width:900px){.fj .engineering-intro{grid-template-columns:minmax(0,1fr)}.fj .engineering-intro-copy,.fj .archive-summary{min-width:0;max-width:100%}}
 @media(max-width:540px){.fj .engineering-intro h1{font-size:clamp(36px,9.3vw,48px);overflow-wrap:anywhere}.fj .archive-summary{border-radius:0}.fj .fj-end>a{font-size:15.5vw;overflow-wrap:normal}.fj .fj-project-title strong{font-size:clamp(30px,8.8vw,40px);white-space:nowrap}}
+
+/* Aero development case study: drawing-sheet imagery and numbered field notes. */
+.aero-hero-figure{margin:0;min-width:0;border:1px solid var(--line);background:var(--paper)}
+.aero-hero-figure img{display:block;width:100%;height:auto}
+.aero-hero-figure figcaption{padding:14px 18px;border-top:1px solid var(--line);font:11px/1.7 'IBM Plex Mono',monospace;color:var(--muted)}
+.aero-workstreams{margin-top:36px}
+.aero-workstreams article{display:grid;grid-template-columns:70px minmax(0,1fr);gap:24px;padding:32px 0;border-top:1px solid var(--line)}
+.aero-stream-number{color:#b43c1c;font:36px/1 'Barlow Condensed',sans-serif}
+.aero-workstreams h3{margin:8px 0 16px;font:600 clamp(30px,3vw,44px)/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase}
+.aero-workstreams article p:not(.eyebrow){max-width:850px;line-height:1.8}
+.aero-workstreams .aero-stream-detail{font:11px/1.8 'IBM Plex Mono',monospace;color:var(--muted);margin-top:18px}
+.fj .project-4 .engineering-project-visual img{object-fit:contain}
+@media(max-width:540px){.aero-workstreams article{grid-template-columns:30px minmax(0,1fr);gap:14px;padding:26px 0}.aero-workstreams article p:not(.eyebrow){font-size:14px}.aero-workstreams article .aero-stream-detail{font-size:11px}.aero-stream-number{font-size:28px}}

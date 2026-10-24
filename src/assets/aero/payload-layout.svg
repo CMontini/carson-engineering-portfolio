@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" role="img" aria-labelledby="title desc">
+<title id="title">SAE Aero fuselage packaging concept</title><desc id="desc">A conceptual side-view diagram separates front and rear groups of three payload bottles with batteries and electronics in the middle. Not to scale.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#c9c9bf" stroke-width=".6"/></pattern></defs>
+<path fill="#eeede6" d="M0 0h1000v640H0z"/><path fill="url(#grid)" d="M30 30h940v580H30z"/>
+<g font-family="monospace" fill="#23251f"><text x="55" y="70" font-size="15">SAE AERO / REGULAR CLASS</text><text x="55" y="100" font-size="12" fill="#b43c1c">FUSELAGE PACKAGING STUDY · DEVELOPMENT IN PROGRESS</text></g>
+<path d="M65 350Q90 250 165 250H655L925 320L655 390H165Q95 390 65 350Z" fill="#f7f6f0" stroke="#23251f" stroke-width="3"/>
+<path d="M50 320H950" stroke="#777c6d" stroke-dasharray="8 8"/>
+<g fill="#e4e4da" stroke="#23251f" stroke-width="2"><rect x="175" y="277" width="44" height="88" rx="5"/><rect x="235" y="277" width="44" height="88" rx="5"/><rect x="295" y="277" width="44" height="88" rx="5"/><rect x="465" y="277" width="44" height="88" rx="5"/><rect x="525" y="277" width="44" height="88" rx="5"/><rect x="585" y="277" width="44" height="88" rx="5"/></g>
+<g stroke="#23251f" stroke-width="2"><path d="M185 277v-9h24v9m36 0v-9h24v9m36 0v-9h24v9m146 0v-9h24v9m36 0v-9h24v9m36 0v-9h24v9" fill="none"/><path d="M360 255v130m85-130v130m205-130v130" stroke-dasharray="4 5"/></g>
+<rect x="373" y="286" width="59" height="67" fill="#df4c25" fill-opacity=".17" stroke="#b43c1c" stroke-width="2"/>
+<path d="M345 225h115v16H345z" fill="#23251f"/><path d="M402 225v-55" stroke="#b43c1c"/><text x="402" y="156" text-anchor="middle" font-family="monospace" font-size="13" fill="#b43c1c">WING REGION</text>
+<g stroke="#b43c1c" fill="none"><path d="M175 410v12h164v-12m34 0v12h59v-12m33 0v12h164v-12"/></g>
+<g font-family="monospace" text-anchor="middle" fill="#23251f" font-size="14"><text x="257" y="452">FRONT PAYLOAD</text><text x="257" y="475" font-size="12">3 × 2 L bottles</text><text x="402" y="505" font-size="12">BATTERY +</text><text x="402" y="524" font-size="12">ELECTRONICS</text><path d="M402 430v55" stroke="#b43c1c"/><text x="547" y="452">REAR PAYLOAD</text><text x="547" y="475" font-size="12">3 × 2 L bottles</text><text x="790" y="452" font-size="12">AFT TRANSITION</text></g>
+<path d="M55 565h890" stroke="#23251f"/><text x="55" y="594" fill="#606356" font-family="monospace" font-size="12">CONCEPT DIAGRAM / NOT TO SCALE / NOT A CAD OR FLIGHT-VALIDATION RESULT</text>
+</svg>
